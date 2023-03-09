@@ -53,7 +53,7 @@ const Home = () => {
       <div className="flex flex-col w-full justify-center items-center gap-y-2">
         <input className="text-center text-black w-1/3" disabled={fetchForCollection} onChange={(e) => { setWalletAddress(e.target.value) }} value={wallet} type={"text"} placeholder="Wallet Address"></input>
         <input className="text-center text-black w-1/3"  onChange={(e) => { setCollectionAddress(e.target.value) }} value={collection} type={"text"} placeholder="Collection Address"></input>
-        <label className="text-pink-400 "><input type={"checkbox"} onChange={(e) => { setFetchForCollection(e.target.checked) }} className="mr-2"></input>View a Collection</label>
+        <label className="text-pink-400 "><input type={"checkbox"} onChange={(e) => { setFetchForCollection(e.target.checked) }} className="mr-2"></input>View A Collection</label>
         <button className={"disabled:bg-slate-500 text-white bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5 hover:text-gray-900 duration-500"} onClick={
           () => {
             if (fetchForCollection) {
