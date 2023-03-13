@@ -15,6 +15,7 @@ export const NFTCard = ({ nft }) => {
 
   const handleClickOpen = () => {
     setOpen(true);
+    console.log("handleOpen called as well")
   };
 
   const handleClose = (props) => {
@@ -27,13 +28,9 @@ export const NFTCard = ({ nft }) => {
   let src = nft.media[0].gateway;
 
   if (src != "" && nft.media[0].format) {
-    return (
+    return (<>
       <div className="w-1/4 flex flex-col translate" onClick={handleClickOpen}>
-        <CustomizedDialogs
-          nft={nft}
-          open={open}
-          handleClose={handleClose}
-        />
+        
         <div className="rounded-md">
           <CustomTag
             autoPlay
@@ -49,6 +46,11 @@ export const NFTCard = ({ nft }) => {
           </div>
         </div>
       </div>
+      <CustomizedDialogs
+      nft={nft}
+      open={open}
+      handleClose={handleClose}
+    /></>
     );
   }
 };

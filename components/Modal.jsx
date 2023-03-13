@@ -56,8 +56,7 @@ export default function CustomizedDialogs(props) {
 
 
     console.log("open:", props.open)
-    return (
-        <div className="">
+    return props.open?<div className="">
             <BootstrapDialog
                 onClose={props.handleClose}
                 aria-labelledby="customized-dialog-title"
@@ -81,6 +80,6 @@ export default function CustomizedDialogs(props) {
                     </Button></a>
                 </DialogActions>
             </BootstrapDialog>
-        </div>
-    );
+        </div>:null
+    
 }
